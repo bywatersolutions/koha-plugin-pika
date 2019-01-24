@@ -3,14 +3,18 @@
     "get": {
       "x-mojo-to": "Com::ByWaterSolutions::Pika::ApiController#hold_suspend",
       "operationId": "pikaHoldSuspend",
-      "tags": ["holds"],
-      "parameters": [{
-        "name": "hold_id",
-        "in": "path",
-        "description": "Internal hold identifier",
-        "required": true,
-        "type": "integer"
-      }],
+      "tags": [
+        "holds"
+      ],
+      "parameters": [
+        {
+          "name": "hold_id",
+          "in": "path",
+          "description": "Internal hold identifier",
+          "required": true,
+          "type": "integer"
+        }
+      ],
       "produces": [
         "application/json"
       ],
@@ -21,13 +25,13 @@
         "404": {
           "description": "An error occured",
           "schema": {
-              "type": "object",
-                "properties": {
-                  "error": {
-                    "description": "An explanation for the error",
-                    "type": "string"
-                  }
-                }
+            "type": "object",
+            "properties": {
+              "error": {
+                "description": "An explanation for the error",
+                "type": "string"
+              }
+            }
           }
         }
       }
@@ -37,14 +41,18 @@
     "get": {
       "x-mojo-to": "Com::ByWaterSolutions::Pika::ApiController#hold_resume",
       "operationId": "pikaHoldResume",
-      "tags": ["holds"],
-      "parameters": [{
-        "name": "hold_id",
-        "in": "path",
-        "description": "Internal hold identifier",
-        "required": true,
-        "type": "integer"
-      }],
+      "tags": [
+        "holds"
+      ],
+      "parameters": [
+        {
+          "name": "hold_id",
+          "in": "path",
+          "description": "Internal hold identifier",
+          "required": true,
+          "type": "integer"
+        }
+      ],
       "produces": [
         "application/json"
       ],
@@ -55,13 +63,13 @@
         "404": {
           "description": "An error occured",
           "schema": {
-              "type": "object",
-                "properties": {
-                  "error": {
-                    "description": "An explanation for the error",
-                    "type": "string"
-                  }
-                }
+            "type": "object",
+            "properties": {
+              "error": {
+                "description": "An explanation for the error",
+                "type": "string"
+              }
+            }
           }
         }
       }
