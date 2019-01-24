@@ -1,6 +1,6 @@
 {
   "/holds/{hold_id}/suspend": {
-    "get": {
+    "post": {
       "x-mojo-to": "Com::ByWaterSolutions::Pika::ApiController#hold_suspend",
       "operationId": "pikaHoldSuspend",
       "tags": [
@@ -38,7 +38,7 @@
     }
   },
   "/holds/{hold_id}/resume": {
-    "get": {
+    "post": {
       "x-mojo-to": "Com::ByWaterSolutions::Pika::ApiController#hold_resume",
       "operationId": "pikaHoldResume",
       "tags": [
