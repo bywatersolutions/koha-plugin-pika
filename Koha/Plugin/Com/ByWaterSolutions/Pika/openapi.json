@@ -1,0 +1,70 @@
+{
+  "/holds/{hold_id}/suspend": {
+    "get": {
+      "x-mojo-to": "Com::ByWaterSolutions::Pika::ApiController#hold_suspend",
+      "operationId": "pikaHoldSuspend",
+      "tags": ["holds"],
+      "parameters": [{
+        "name": "hold_id",
+        "in": "path",
+        "description": "Internal hold identifier",
+        "required": true,
+        "type": "integer"
+      }],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Hash of data in JSON"
+        },
+        "404": {
+          "description": "An error occured",
+          "schema": {
+              "type": "object",
+                "properties": {
+                  "error": {
+                    "description": "An explanation for the error",
+                    "type": "string"
+                  }
+                }
+          }
+        }
+      }
+    }
+  },
+  "/holds/{hold_id}/resume": {
+    "get": {
+      "x-mojo-to": "Com::ByWaterSolutions::Pika::ApiController#hold_resume",
+      "operationId": "pikaHoldResume",
+      "tags": ["holds"],
+      "parameters": [{
+        "name": "hold_id",
+        "in": "path",
+        "description": "Internal hold identifier",
+        "required": true,
+        "type": "integer"
+      }],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Hash of data in JSON"
+        },
+        "404": {
+          "description": "An error occured",
+          "schema": {
+              "type": "object",
+                "properties": {
+                  "error": {
+                    "description": "An explanation for the error",
+                    "type": "string"
+                  }
+                }
+          }
+        }
+      }
+    }
+  }
+}
